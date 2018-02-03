@@ -7,7 +7,7 @@
   <h3><%= user.username %></h3>
   <ul>
     <% user.tweets.each_with_index do |tweet, index| %>
-      <li><%= index %>. <%= tweet.content %></li>
+      <li><%= index + 1%>. <%= tweet.content %></li>
     <% end %>
   </ul>
 <% end %>
