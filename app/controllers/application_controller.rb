@@ -98,6 +98,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/tweets' do
+    binding.pry
     @user = User.find_by(session[:user_id])
 
     if params[:content].empty?
