@@ -104,6 +104,7 @@ class ApplicationController < Sinatra::Base
     if params[:content].empty?
       redirect to "/tweets/new"
     else
+      binding.pry
       @tweet = Tweet.create(params)
       @tweet.user = @user
       @tweet.save
