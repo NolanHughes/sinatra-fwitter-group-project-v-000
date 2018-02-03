@@ -106,6 +106,8 @@ class ApplicationController < Sinatra::Base
       @tweet = Tweet.create(params)
       @tweet.user = @user
       @tweet.save
+
+      redirect to "/tweets"
     end
   end
 
